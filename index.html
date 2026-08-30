@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Dev | Web Developer & AI Integration Specialist</title>
+  <meta name="description" content="Portfolio of Alex Dev - 1+ Year Experienced Full Stack Web Developer & AI Bot Integration Specialist. Available on Fiverr and Upwork.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#07090e] text-slate-100 antialiased relative min-h-screen">
+
+  <!-- Background Particle Animation Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Glowing background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+          &lt;/&gt;
+        </div>
+        <div>
+          <span class="font-extrabold text-xl tracking-tight text-white font-heading dev-name">Alex Dev</span>
+          <span class="block text-[10px] uppercase font-mono tracking-widest text-cyan-400 font-semibold">Web & AI Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#ai-showcase" class="hover:text-cyan-300 flex items-center gap-1.5 transition-colors">
+          <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i> AI Bot Demo
+        </a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#pricing" class="hover:text-blue-400 transition-colors">Fiverr Packages</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <a href="https://www.fiverr.com" target="_blank" class="link-fiverr btn-glow-fiverr px-5 py-2.5 rounded-xl text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> Order on Fiverr
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white" aria-label="Open menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-white/10 px-6 py-6 space-y-4 text-base font-medium">
+      <a href="#about" class="mobile-nav-link block text-slate-300 hover:text-white">About</a>
+      <a href="#services" class="mobile-nav-link block text-slate-300 hover:text-white">Services</a>
+      <a href="#skills" class="mobile-nav-link block text-slate-300 hover:text-white">Skills</a>
+      <a href="#ai-showcase" class="mobile-nav-link block text-cyan-400 font-semibold">AI Bot Demo</a>
+      <a href="#projects" class="mobile-nav-link block text-slate-300 hover:text-white">Projects</a>
+      <a href="#pricing" class="mobile-nav-link block text-slate-300 hover:text-white">Pricing Packages</a>
+      <a href="#contact" class="mobile-nav-link block text-slate-300 hover:text-white">Contact</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="https://www.fiverr.com" target="_blank" class="link-fiverr btn-glow-fiverr py-3 text-center rounded-xl text-white font-bold text-sm">
+          Hire on Fiverr
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 status-dot"></span>
+            <span class="dev-badge">🚀 Available for Fiverr & Freelance Projects</span>
+          </div>
+
+          <!-- Hero Main Title -->
+          <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight font-heading">
+            Hi, I'm <span class="gradient-text dev-name">Alex Dev</span>.<br>
+            <span class="text-3xl sm:text-5xl font-bold text-slate-200">Web Developer & AI Specialist.</span>
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 dev-tagline">
+            Building modern, high-converting websites and integrating smart 24/7 AI Chatbots (OpenAI & Gemini) that turn web traffic into loyal clients.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="https://www.fiverr.com" target="_blank" class="link-fiverr btn-glow-fiverr px-8 py-4 rounded-2xl text-white font-bold text-sm sm:text-base flex items-center gap-2 shadow-xl">
+              <i data-lucide="sparkles" class="w-5 h-5"></i> Hire Me on Fiverr
+            </a>
+            <a href="#ai-showcase" class="btn-glow-primary px-7 py-4 rounded-2xl text-white font-bold text-sm sm:text-base flex items-center gap-2">
+              <i data-lucide="bot" class="w-5 h-5 text-cyan-300"></i> Try Live AI Demo
+            </a>
+            <a href="#projects" class="px-6 py-4 rounded-2xl glass-panel text-slate-300 hover:text-white font-semibold text-sm sm:text-base flex items-center gap-2">
+              <i data-lucide="layers" class="w-5 h-5"></i> View Projects
+            </a>
+          </div>
+
+          <!-- Social Badges -->
+          <div class="pt-6 flex items-center justify-center lg:justify-start gap-4 text-slate-400">
+            <span class="text-xs uppercase font-mono tracking-wider">Connect:</span>
+            <a href="#" class="link-github p-2.5 rounded-xl glass-panel hover:text-white hover:border-blue-400 transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+            <a href="#" class="link-linkedin p-2.5 rounded-xl glass-panel hover:text-white hover:border-blue-400 transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="link-whatsapp p-2.5 rounded-xl glass-panel hover:text-emerald-400 hover:border-emerald-400 transition-all"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+            <a href="#" class="link-email p-2.5 rounded-xl glass-panel hover:text-blue-400 hover:border-blue-400 transition-all"><i data-lucide="mail" class="w-5 h-5"></i></a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual / Interactive Code Card -->
+        <div class="lg:col-span-5">
+          <div class="code-terminal relative overflow-hidden">
+            <div class="code-terminal-header px-4 py-3 flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+              </div>
+              <span class="text-xs font-mono text-slate-400">developer_profile.js</span>
+              <div class="text-cyan-400 text-xs font-mono">v1.2.0</div>
+            </div>
+            <div class="p-6 font-mono text-xs sm:text-sm text-slate-300 space-y-2 overflow-x-auto">
+              <p><span class="text-purple-400">const</span> <span class="text-yellow-300">developer</span> = {</p>
+              <p class="pl-4"><span class="text-cyan-300">name</span>: <span class="text-emerald-300">'<span class="dev-name">Alex Dev</span>'</span>,</p>
+              <p class="pl-4"><span class="text-cyan-300">experience</span>: <span class="text-emerald-300">'1+ Year Professional'</span>,</p>
+              <p class="pl-4"><span class="text-cyan-300">specialization</span>: [<span class="text-amber-300">'Web Dev'</span>, <span class="text-amber-300">'AI Chatbots'</span>],</p>
+              <p class="pl-4"><span class="text-cyan-300">aiModels</span>: [<span class="text-purple-300">'OpenAI GPT'</span>, <span class="text-purple-300">'Google Gemini'</span>],</p>
+              <p class="pl-4"><span class="text-cyan-300">fiverrRating</span>: <span class="text-yellow-400 font-bold">5.0 ⭐</span>,</p>
+              <p class="pl-4"><span class="text-cyan-300">status</span>: <span class="text-emerald-400">'Ready for Instant Hire'</span>,</p>
+              <p class="pl-4"><span class="text-blue-400">buildSmartWebsite</span>: <span class="text-purple-400">function</span>() {</p>
+              <p class="pl-8 text-slate-400">// Clean Code + AI Bot + 100% Responsive</p>
+              <p class="pl-8"><span class="text-purple-400">return</span> <span class="text-emerald-300">'High Conversion & Happy Clients 🚀'</span>;</p>
+              <p class="pl-4">}</p>
+              <p>};</p>
+            </div>
+            
+            <!-- Quick Feature Highlight Banner -->
+            <div class="bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-slate-900/80 p-4 border-t border-white/5 flex items-center justify-between">
+              <div class="flex items-center space-x-2 text-xs text-slate-300">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                <span>100% Satisfaction Guarantee</span>
+              </div>
+              <span class="text-[11px] font-mono bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded-md">Fiverr Verified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats Bar -->
+      <div id="stats-container" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-16">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT & TECH MATRIX ==================== -->
+  <section id="about" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 relative">
+          <div class="glass-panel p-4 rounded-3xl relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=600&q=80" alt="Developer Avatar" class="dev-avatar w-full h-96 object-cover rounded-2xl">
+            <div class="absolute bottom-8 left-8 right-8 glass-panel p-4 rounded-2xl border-white/10 backdrop-blur-md">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="font-bold text-white dev-name">Alex Dev</h4>
+                  <p class="text-xs text-slate-400 dev-location">Global Remote Freelancer</p>
+                </div>
+                <div class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
+                  1 Year Exp
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            About The Developer
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+            Bridging Modern Web Development with Smart AI Automation
+          </h2>
+          <p class="text-slate-300 leading-relaxed dev-bio">
+            Passionate Web Developer with 1+ year of intensive hands-on experience building lightning-fast modern websites, responsive frontend UIs, backend API architectures, and cutting-edge AI chatbot integrations. I help clients on Fiverr and global businesses automate customer engagement, showcase their brands, and increase conversion rates.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="glass-panel p-4 rounded-2xl flex items-center space-x-3">
+              <i data-lucide="zap" class="w-5 h-5 text-yellow-400"></i>
+              <span class="text-sm font-semibold text-slate-200">Pixel-Perfect Responsive UI</span>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl flex items-center space-x-3">
+              <i data-lucide="bot" class="w-5 h-5 text-cyan-400"></i>
+              <span class="text-sm font-semibold text-slate-200">AI Bot (OpenAI / Gemini) API</span>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl flex items-center space-x-3">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+              <span class="text-sm font-semibold text-slate-200">Clean & Maintainable Code</span>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl flex items-center space-x-3">
+              <i data-lucide="clock" class="w-5 h-5 text-purple-400"></i>
+              <span class="text-sm font-semibold text-slate-200">Fast Turnaround on Fiverr</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="py-24 relative z-10 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          What I Can Build For You
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          Services Offered on Fiverr & Freelance Platforms
+        </h2>
+        <p class="text-slate-400 text-base">
+          From full responsive websites to custom AI bot integrations, here is how I help your business grow.
+        </p>
+      </div>
+
+      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS MATRIX ==================== -->
+  <section id="skills" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+          Technical Proficiency
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          Skills & Modern Tech Stack
+        </h2>
+        <p class="text-slate-400 text-base">
+          Mastering modern web standards, frontend frameworks, backend APIs, and artificial intelligence integration.
+        </p>
+      </div>
+
+      <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== LIVE AI BOT SHOWCASE (SHOWSTOPPER) ==================== -->
+  <section id="ai-showcase" class="py-24 relative z-10 bg-gradient-to-b from-slate-950/80 via-blue-950/20 to-slate-950/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Interactive Live Demonstration
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          Test My AI Bot Integration Live! 🤖
+        </h2>
+        <p class="text-slate-300 text-base">
+          I can build an intelligent AI chatbot like this directly for your website. Ask questions below to experience how it assists your customers in real-time.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto glass-panel rounded-3xl overflow-hidden shadow-2xl border-cyan-500/30">
+        
+        <!-- Showcase Bot Header -->
+        <div class="bg-slate-900/90 px-6 py-4 border-b border-white/10 flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="relative">
+              <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+              </div>
+              <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-900 rounded-full status-dot"></span>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base font-heading">DevBot AI Assistant</h3>
+              <p class="text-xs text-cyan-400 font-mono">Live Demo • Powered by AI</p>
+            </div>
+          </div>
+          <div class="hidden sm:flex items-center space-x-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-white/5">
+              OpenAI / Gemini Ready
+            </span>
+          </div>
+        </div>
+
+        <!-- Chat History -->
+        <div id="showcase-chat-messages" class="p-6 h-96 overflow-y-auto space-y-3 bg-[#07090e]/80">
+          <!-- Initial Welcome Message -->
+          <div class="flex justify-start my-2">
+            <div class="max-w-[85%] rounded-2xl p-4 text-sm bg-slate-800/90 text-slate-200 border border-white/5 rounded-bl-none shadow-md">
+              <div class="flex items-center space-x-1.5 text-xs text-blue-400 font-semibold mb-1.5">
+                <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+                <span>DevBot AI</span>
+              </div>
+              <p class="leading-relaxed">
+                Hello! 👋 I am the AI assistant integrated on this portfolio. I can answer any questions about web development services, Fiverr packages, turnaround times, and custom AI integrations. Click any suggestion below or type your message!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Suggestions -->
+        <div class="p-4 bg-slate-900/60 border-t border-white/5">
+          <div class="text-xs text-slate-400 mb-2 font-medium">Quick Prompts (Click to test):</div>
+          <div id="showcase-quick-suggestions" class="flex flex-wrap gap-2">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <form id="showcase-chat-form" class="p-4 bg-slate-900 border-t border-white/10 flex items-center gap-3">
+          <input id="showcase-chat-input" type="text" placeholder="Ask anything about services, pricing, tech stack, or hiring..." class="flex-1 bg-slate-800/90 text-white placeholder-slate-400 text-sm px-5 py-3.5 rounded-2xl border border-white/10 focus:outline-none focus:border-cyan-400 transition-colors">
+          <button type="submit" class="btn-glow-primary px-6 py-3.5 rounded-2xl text-white font-bold text-sm flex items-center gap-2">
+            <span>Send</span>
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          Real-World Work
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          Featured Projects & Live Demos
+        </h2>
+        <p class="text-slate-400 text-base">
+          Explore recent web development applications and AI bot integrations created for clients and businesses.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button class="project-filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all active bg-blue-600 text-white" data-category="all">
+          All Projects
+        </button>
+        <button class="project-filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-400 hover:text-white" data-category="ai">
+          🤖 AI & Chatbots
+        </button>
+        <button class="project-filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-400 hover:text-white" data-category="fullstack">
+          ⚡ Full-Stack Apps
+        </button>
+        <button class="project-filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-400 hover:text-white" data-category="ecommerce">
+          🛍️ E-Commerce
+        </button>
+        <button class="project-filter-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-800/80 text-slate-400 hover:text-white" data-category="landing">
+          🚀 Landing Pages
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FIVERR GIG PACKAGES & PRICING ==================== -->
+  <section id="pricing" class="py-24 relative z-10 bg-slate-950/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i> Fiverr Transparent Packages
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          Choose Your Development Package
+        </h2>
+        <p class="text-slate-400 text-base">
+          Affordable, fixed pricing with guaranteed delivery times and unlimited revisions on Fiverr.
+        </p>
+      </div>
+
+      <div id="pricing-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS & TRUST ==================== -->
+  <section class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+          Client Feedback
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+          5-Star Reviews & Verified Feedback
+        </h2>
+        <p class="text-slate-400 text-base">
+          What international business owners say about the code quality, communication, and AI bot integration.
+        </p>
+      </div>
+
+      <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQS ==================== -->
+  <section class="py-20 relative z-10 bg-slate-950/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Got questions before placing an order? Here are quick answers.
+        </p>
+      </div>
+
+      <div id="faqs-container" class="space-y-4">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT & DIRECT ORDER ==================== -->
+  <section id="contact" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-panel p-8 sm:p-14 rounded-3xl border-blue-500/30 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              Get in Touch
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
+              Have a Project in Mind? Let's Build It!
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed">
+              Whether you need a full responsive website, a custom AI chatbot, or a quick bug fix—I am available to start immediately on Fiverr or Upwork.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="https://www.fiverr.com" target="_blank" class="link-fiverr btn-glow-fiverr px-8 py-4 rounded-2xl text-white font-bold text-sm sm:text-base flex items-center gap-2">
+                <i data-lucide="shopping-cart" class="w-5 h-5"></i> Order Gig on Fiverr
+              </a>
+              <a href="#" class="link-whatsapp px-8 py-4 rounded-2xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-bold text-sm sm:text-base flex items-center gap-2 transition-all">
+                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i> WhatsApp Message
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-4">
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 font-mono">Email Address</span>
+                <p class="text-sm font-bold text-white link-email">developer.pro@example.com</p>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-2xl flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <i data-lucide="globe" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 font-mono">Freelance Platforms</span>
+                <p class="text-sm font-bold text-white">Fiverr • Upwork • Remote</p>
+              </div>
+            </div>
+
+            <button id="share-portfolio-btn" class="w-full py-4 rounded-2xl glass-panel text-slate-300 hover:text-white font-semibold text-sm flex items-center justify-center gap-2 border-white/10 hover:border-blue-400 transition-all">
+              <i data-lucide="share-2" class="w-4 h-4"></i> Copy Portfolio Link
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-10 border-t border-white/5 relative z-10 text-center text-slate-400 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-white dev-name">Alex Dev</span>
+        <span>• Web & AI Integration Specialist</span>
+      </div>
+      <div>
+        Designed for High Fiverr Conversion © 2026. All rights reserved.
+      </div>
+      <div class="flex space-x-4">
+        <a href="https://www.fiverr.com" target="_blank" class="link-fiverr text-emerald-400 hover:underline">Fiverr</a>
+        <a href="https://www.upwork.com" target="_blank" class="link-upwork text-blue-400 hover:underline">Upwork</a>
+        <a href="#" class="link-github text-slate-300 hover:underline">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING AI CHATBOT WIDGET ==================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- Floating Chat Window -->
+    <div id="ai-chat-window" class="ai-chat-window hidden-chat w-80 sm:w-96 glass-panel rounded-3xl overflow-hidden shadow-2xl border-blue-500/40 mb-4">
+      <!-- Header -->
+      <div class="bg-slate-900/90 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white text-xs">
+            <i data-lucide="bot" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-xs">DevBot AI Assistant</h4>
+            <span class="text-[10px] text-emerald-400">Online • Ask anything</span>
+          </div>
+        </div>
+        <button id="ai-chat-close" class="p-1 rounded-lg text-slate-400 hover:text-white" aria-label="Close chat">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Messages -->
+      <div id="ai-chat-messages" class="p-4 h-64 overflow-y-auto space-y-2 bg-[#07090e]/90 text-xs">
+        <div class="flex justify-start my-1">
+          <div class="max-w-[85%] rounded-2xl p-3 bg-slate-800 text-slate-200 border border-white/5 rounded-bl-none">
+            <div class="flex items-center space-x-1 text-[10px] text-blue-400 font-semibold mb-1">
+              <i data-lucide="bot" class="w-3 h-3"></i>
+              <span>DevBot</span>
+            </div>
+            <span>Hi! Ask me anything about <span class="dev-name">Alex Dev</span>'s web development services or AI integrations!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick suggestions -->
+      <div class="px-3 py-2 bg-slate-900/60 border-t border-white/5 overflow-x-auto">
+        <div id="ai-quick-suggestions" class="flex gap-1.5 whitespace-nowrap">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+
+      <!-- Input Form -->
+      <form id="ai-chat-form" class="p-3 bg-slate-900 border-t border-white/10 flex items-center gap-2">
+        <input id="ai-chat-input" type="text" placeholder="Type a message..." class="flex-1 bg-slate-800 text-white placeholder-slate-400 text-xs px-3.5 py-2.5 rounded-xl border border-white/10 focus:outline-none focus:border-blue-400">
+        <button type="submit" class="btn-glow-primary p-2.5 rounded-xl text-white">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Floating Trigger Button -->
+    <button id="ai-chat-toggle" class="btn-glow-primary p-4 rounded-full text-white shadow-2xl flex items-center space-x-2 group hover:scale-105 transition-all">
+      <i data-lucide="bot" class="w-6 h-6 animate-pulse"></i>
+      <span class="hidden sm:inline font-bold text-xs pr-1">Chat with AI</span>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
