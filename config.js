@@ -5,7 +5,7 @@
 const PORTFOLIO_CONFIG = {
   // Personal & Professional Information
   developer: {
-    name: "Alex Dev", // Change to your name
+    name: "Zavi Khan", // Change to your name
     title: "Full Stack Web Developer & AI Integration Specialist",
     badge: "🚀 Available for Fiverr & Freelance Projects",
     tagline: "I build high-converting websites and integrate smart AI bots that drive real business results.",
@@ -13,14 +13,14 @@ const PORTFOLIO_CONFIG = {
     completedProjects: "25+",
     satisfactionRate: "100%",
     aiBotsBuilt: "15+",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
+    avatar: "profile.jpg",
     bio: "Passionate Web Developer with 1+ year of intensive hands-on experience building lightning-fast modern websites, responsive frontend UIs, backend API architectures, and cutting-edge AI chatbot integrations. I help clients on Fiverr and global businesses automate customer engagement, showcase their brands, and increase conversion rates.",
     location: "Global / Remote Freelancer"
   },
 
   // Social & Platform Links
   links: {
-    fiverr: "https://www.fiverr.com", // Replace with your Fiverr profile/gig link
+    fiverr: "https://www.fiverr.com/zavi_001", // Replace with your Fiverr profile/gig link
     upwork: "https://www.upwork.com",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -303,7 +303,7 @@ const PORTFOLIO_CONFIG = {
   // Pre-configured intelligent knowledge base for the interactive AI Bot
   aiBotKnowledge: {
     botName: "DevBot AI",
-    developerName: "Alex Dev",
+    developerName: "Zavi Khan",
     quickSuggestions: [
       "What services do you offer?",
       "Can you integrate an AI bot into my website?",
