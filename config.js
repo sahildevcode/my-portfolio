@@ -128,7 +128,7 @@ const PORTFOLIO_CONFIG = {
       image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
       description: "Custom visual portfolio website built for professional artist Kuldeep Singh (300k+ Instagram followers) to display his fine artwork, exhibition galleries, and client commissions.",
       tags: ["Client Portfolio", "Visual Art", "Responsive UI", "300k+ Followers"],
-      liveDemo: "https://artist-kuldeep-singh.netlify.app/",
+      liveDemo: "https://www.artistkuldeepsingh.com/",
       instagram: "https://www.instagram.com/artist_kuldeep_singh?stkn=enYyOXB6MWhoZGxz",
       github: "https://github.com/sahildevcode/artist-kuldeep-singh",
       featured: true
@@ -141,7 +141,7 @@ const PORTFOLIO_CONFIG = {
       image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
       description: "Complete production-ready fullstack supplement platform built with high-performance frontend, robust backend APIs, SQL database, and Google Search indexing.",
       tags: ["Full-Stack", "E-Commerce", "REST APIs", "SQL Database", "Google Indexing"],
-      liveDemo: "https://og-supplement.netlify.app/",
+      liveDemo: "https://og-supplement.vercel.app/",
       github: "https://github.com/sahildevcode/og-supplement",
       featured: true
     },
@@ -153,7 +153,7 @@ const PORTFOLIO_CONFIG = {
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
       description: "Flagship educational institute web platform engineered with 50+ hours of development, featuring advanced institute workflows, comprehensive course listings, and fullstack portal.",
       tags: ["Flagship Full-Stack", "50+ Hours Dev", "Education Portal", "Advanced Architecture"],
-      liveDemo: "https://pkc-education-institute.vercel.app/",
+      liveDemo: "https://www.pkceducation.in/",
       github: "https://github.com/sahildevcode/university-portal",
       featured: true
     }
