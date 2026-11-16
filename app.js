@@ -142,36 +142,36 @@ function initProjects(config) {
       : config.projects.filter(p => p.category === filter);
 
     container.innerHTML = filtered.map(p => `
-      <div class="glass-panel rounded-3xl overflow-hidden group flex flex-col justify-between">
-        <div class="relative overflow-hidden h-52 bg-slate-900">
+      <div class="glass-panel rounded-2xl overflow-hidden group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-36 bg-slate-900">
           <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-          <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold rounded-full bg-slate-900/80 backdrop-blur border border-white/10 text-cyan-300">
+          <span class="absolute top-3 left-3 px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-slate-900/80 backdrop-blur border border-white/10 text-cyan-300">
             ${p.categoryLabel}
           </span>
-          ${p.featured ? '<span class="absolute top-4 right-4 px-2.5 py-0.5 text-xs font-bold rounded-md bg-amber-500/90 text-slate-950">Featured</span>' : ''}
+          ${p.featured ? '<span class="absolute top-3 right-3 px-2 py-0.5 text-[11px] font-bold rounded-md bg-amber-500/90 text-slate-950">Featured</span>' : ''}
         </div>
-        <div class="p-6 flex-1 flex flex-col justify-between">
+        <div class="p-4 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="text-lg font-bold text-white mb-2 font-heading group-hover:text-blue-400 transition-colors">${p.title}</h3>
-            <p class="text-slate-400 text-sm mb-4 leading-relaxed">${p.description}</p>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              ${p.tags.map(t => `<span class="tech-badge text-xs px-2.5 py-1 rounded-lg text-slate-300 font-mono">${t}</span>`).join("")}
+            <h3 class="text-base font-bold text-white mb-1.5 font-heading group-hover:text-blue-400 transition-colors line-clamp-1">${p.title}</h3>
+            <p class="text-slate-400 text-xs mb-3 leading-relaxed line-clamp-2">${p.description}</p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              ${p.tags.map(t => `<span class="tech-badge text-[11px] px-2 py-0.5 rounded-md text-slate-300 font-mono">${t}</span>`).join("")}
             </div>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-white/5 flex-wrap gap-2">
-            <a href="${p.liveDemo === '#ai-demo' ? '#ai-showcase' : p.liveDemo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-4 py-2 rounded-xl bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors">
+          <div class="flex items-center justify-between pt-3 border-t border-white/5 flex-wrap gap-2">
+            <a href="${p.liveDemo === '#ai-demo' ? '#ai-showcase' : p.liveDemo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors">
               <i data-lucide="external-link" class="w-3.5 h-3.5 mr-1.5"></i> Live Demo
             </a>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5">
               ${p.instagram ? `
-                <a href="${p.instagram}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-3 py-2 rounded-xl bg-pink-500/20 text-pink-300 hover:bg-pink-500/30 border border-pink-500/30 transition-colors">
-                  <i data-lucide="instagram" class="w-3.5 h-3.5 mr-1.5 text-pink-400"></i> Instagram (300k)
+                <a href="${p.instagram}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-pink-500/20 text-pink-300 hover:bg-pink-500/30 border border-pink-500/30 transition-colors">
+                  <i data-lucide="instagram" class="w-3.5 h-3.5 mr-1 text-pink-400"></i> Insta (300k)
                 </a>
               ` : ''}
               ${p.github ? `
-                <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-4 py-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
-                  <i data-lucide="github" class="w-3.5 h-3.5 mr-1.5"></i> GitHub
+                <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
+                  <i data-lucide="github" class="w-3.5 h-3.5 mr-1"></i> Code
                 </a>
               ` : ''}
             </div>
