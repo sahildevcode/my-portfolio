@@ -156,18 +156,6 @@ const PORTFOLIO_CONFIG = {
       liveDemo: "https://pkc-education-institute.vercel.app/",
       github: "https://github.com/sahildevcode/university-portal",
       featured: true
-    },
-    {
-      id: 4,
-      title: "Advance Computer Bill Book",
-      category: "fullstack",
-      categoryLabel: "Billing Web App",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
-      description: "Fast, production-ready digital invoice & bill book web app designed and deployed in just 24 hours for a local shopkeeper to streamline daily sales and billing.",
-      tags: ["Web App", "Digital Billing", "1-Day Delivery", "Shopkeeper POS", "Invoice System"],
-      liveDemo: "https://advancecomputer.netlify.app/a",
-      github: "https://github.com/sahildevcode/Advance-Computer",
-      featured: true
     }
   ],
 
